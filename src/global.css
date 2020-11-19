@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  background: #1d2532;
+  font-size: 62.5%;
+}
+
+body {
+  height: 84vh;
+  width: 100%;
+
+  background-image: url("assets/background.png");
+  background-size: cover;
+  opacity: 0.9;
+  background-position: bottom center;
+
+  
+}

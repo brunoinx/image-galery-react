@@ -1,0 +1,228 @@
+main section {
+  width: 80%;
+  height: 1460px;
+  max-width: 980px;
+  background: #39415c;
+  border-radius: 0.8rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  top: 64%;
+  margin-bottom: 60px;
+}
+
+main section .image-active {
+  width: 100%;
+  max-width: 560px;
+  height: 340px;
+  object-fit: cover;
+  margin-bottom: 10px;
+
+  border: 2px solid #ced4da;
+  border-radius: 0.8rem;
+  box-shadow: 3px 3px 6px 6px #ced4da;
+
+  position: absolute;
+  top: -18%;
+  align-self: center;
+}
+
+main section #content-card {
+  width: 90%;
+  max-width: 960px;
+  height: 87%;
+  margin: 2rem;
+
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 190px 190px 190px 190px;
+  grid-template-rows: 280px 280px 280px 280px;
+  grid-gap: 26px;
+}
+
+main section #content-card a{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+  border-radius: 0.8rem;
+  background-color: #ced4da;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease 0s;
+}
+
+main section #content-card .active {
+  opacity: 0.4;
+}
+
+main section #content-card .inactive-search-image {
+  display: none;
+}
+
+main section #content-card a:hover {
+  transform: translateY(-8px);
+}
+
+main section #content-card a figure {
+  margin: 1rem;
+  
+}
+
+main section #content-card a figure img {
+  height: 180px;
+  width: 170px;
+  border-radius: 0.8rem;
+}
+main section #content-card a figure figcaption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main section #content-card a figure figcaption span{
+  color: #0b0c0c;
+  font-size: 1.8rem;
+  font-family: Ubuntu, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  margin: 0.4rem 0;
+}
+
+main section #content-card a .result {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+
+  color: #0b0c0c;
+}
+
+main section #content-card a figure figcaption p{
+  font-size: 1.6rem;
+  font-family: 'Times New Roman', Times, serif;
+  color: #0b0c0c;
+  font-style: italic;
+  text-align: center;
+  line-height: 1.5rem;
+}
+
+main section .content-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #39415c;
+  width: 100%;
+  height: 60px;
+  border-radius: 0.6rem;
+
+  position: absolute;
+  bottom: 0;
+}
+
+main section .content-pagination span {
+  color: #e5e5e5;
+  display: block;
+  font-size: 1.6rem;
+  line-height: 1.4rem;
+  font-weight: bold;
+}
+
+main section .content-pagination .pagination-item {
+  display: flex;
+  justify-content: space-around;
+  background-color: #ced4da;
+  height: 84%;
+  width: 40%;
+  border-radius: 0.8rem;
+}
+
+main section .content-pagination .pagination-item a {
+  width: 100px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  border-radius: 1.6rem;
+  background-color:#56cfe1;
+  color: #fff;
+  margin: 0 0.4rem;
+  text-decoration: none;
+  transition: opacity 0.3s;
+  font-size: 1.6rem;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: Ubuntu;
+}
+
+main section .content-pagination .pagination-item a:hover {
+  opacity: 0.4;
+}
+
+@media (max-width: 1140px) {
+  body {
+    background-size: cover repeat-x;
+  }
+  main section {
+    height: 1790px;
+  }
+
+  main section .image-active {
+    height: 360px;
+    width: 360px;
+    top: -16%;
+  }
+
+  main section #content-card {
+    grid-template-columns: 190px 190px 190px;
+    grid-template-rows: 280px 280px 280px;
+  }
+}
+
+@media (max-width: 900px) {
+  body {
+    background-size: cover repeat-x;
+  }
+
+  main section {
+    height: 2860px;
+  }
+
+  main section .image-active {
+    height: 360px;
+    width: 360px;
+    top: -10%;
+  }
+
+  main section #content-card {
+    height: 90%;
+    grid-template-columns: 190px 190px;
+    grid-template-rows: 280px 280px;
+  }
+}
+
+@media (max-width: 660px) {
+  body {
+    width: 100vw;
+  }
+
+  main section {
+    height: 5100px;
+  }
+
+  main section .image-active {
+    height: 310px;
+    width: 310px;
+    top: -5%;
+  }
+
+  main section #content-card {
+    height: 95%;
+    grid-template-columns: 190px;
+    grid-template-rows: 280px;
+  }
+}

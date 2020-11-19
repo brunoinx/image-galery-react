@@ -1,0 +1,79 @@
+header {
+  display: flex;
+  justify-content: center;
+}
+header .content-header {
+  display: flex;
+  justify-content: space-between;
+
+  width: 90%;
+  max-width: 980px;
+
+  padding: 16px;
+  margin-right: 0;
+}
+
+header .content-header .img-logo {
+  height: 60px;
+}
+header .content-header nav {
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .content-header ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+header .content-header ul li a{
+  text-decoration: none;
+  color: #eee;
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-family: Ubuntu, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+header .content-header .search-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 260px;
+}
+
+
+
+header .content-header .search-group input {
+  width: 100%;
+  height: 3.6rem;
+  margin-right: 2rem;
+  border-radius: 0.8rem;
+  background-color: #e4e8eb;
+  border: 1px solid #56cfe1;
+  outline: 0;
+  padding: 0 1.6rem;
+}
+
+header .content-header .search-group button {
+  border-radius: 0.8rem;
+  height: 3.6rem;
+  width: 50%;
+  background: #56cfe1;
+  color: #FFF;
+  font-weight: bold;
+  border: none;
+  transition: opacity 0.3s;
+}
+
+header .content-header .search-group button:hover {
+  opacity: 0.8;
+}
+
+main {
+ display: flex;
+ justify-content: center;
+
+ height: 100%;
+}
