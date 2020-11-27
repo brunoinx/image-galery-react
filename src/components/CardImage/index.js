@@ -5,13 +5,14 @@ import './styles.css';
 
 export default function CardImage ({ children }) {
   const [images, setImages] = useState([]);
+  const [activeImage, setActiveImage] = useState('');
   const [activeImageIndex, setActiveImageIndex] = useState(0);
-
+  
   const [currentPage, setCurrentPage] = useState(1);
   const [total, setTotal] = useState(0);
-  const [limit, setLimit] = useState(15);
+  const [limit] = useState(15);
   const [inicialItem, setInicialItem] = useState(0);
-
+  
   useEffect(() => {
     async function loadNextPages() {
       const { data } =  await api.get('photos');
@@ -35,24 +36,40 @@ export default function CardImage ({ children }) {
     }
     loadNextPages();
 
-  },[currentPage])
+  }, [currentPage]);
+
+  useEffect(() => {
+    async function TogleActiveImage() {
+      const { data } =  await api.get(`photos`);
+
+      setActiveImage(data[activeImageIndex]);
+    }
+    
+    TogleActiveImage();
+  }, [activeImageIndex]);
+
 
   return (
     <>
       <section>
-        <img src={images[activeImageIndex].url} alt={images.title} className="image-active"/>
+        <img
+          src={activeImage.url}
+          alt={images.title}
+          className="image-active"
+        />
         
         <div id="content-card">
-            {children}
+          {children}
 
-            {images.map((image, index) => (
-            <a 
+          {images.map((image, index) => (
+            <a
+              href='#'
               key={image.id}
               className={activeImageIndex === index ? 'active' : ''}
               onClick={() => setActiveImageIndex(index)}
             >
               <figure>
-                <img src={image.url} alt="imagem"/>
+                <img src={image.url} alt="imagen"/>
                 <figcaption>
                   <span>Figura {image.id}</span>
                   <p>"{image.title}"</p>
